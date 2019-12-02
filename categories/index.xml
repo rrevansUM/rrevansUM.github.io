@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on I&#39;m Relearnding (and sometimes just learnding)</title>
+    <link>https://rrevansUM.github.io/categories/</link>
+    <description>Recent content in Categories on I&#39;m Relearnding (and sometimes just learnding)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>revans.evans@gmail.com (Rich Evans)</managingEditor>
+    <webMaster>revans.evans@gmail.com (Rich Evans)</webMaster>
+    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    
+	<atom:link href="https://rrevansUM.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R</title>
+      <link>https://rrevansUM.github.io/categories/r/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>https://rrevansUM.github.io/categories/r/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
