@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on I&#39;m Relearnding (and sometimes just learnding)</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on I&#39;m Relearnding (and sometimes just learnding)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>revans.evans@gmail.com (Rich Evans)</managingEditor>
+    <webMaster>revans.evans@gmail.com (Rich Evans)</webMaster>
+    <lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linear Algebra</title>
+      <link>/categories/linear-algebra/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>/categories/linear-algebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matrices</title>
+      <link>/categories/matrices/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>/categories/matrices/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

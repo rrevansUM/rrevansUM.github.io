@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>I&#39;m Relearnding (and sometimes just learnding)</title>
+    <link>/</link>
+    <description>Recent content on I&#39;m Relearnding (and sometimes just learnding)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>revans.evans@gmail.com (Rich Evans)</managingEditor>
+    <webMaster>revans.evans@gmail.com (Rich Evans)</webMaster>
+    <lastBuildDate>Tue, 03 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Harville Chapter 1</title>
+      <link>/post/harville-chapter-1/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>/post/harville-chapter-1/</guid>
+      <description>IntroI’ve come across countless blogs (Detroit data lab, Data Science +, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some time. In this blog I would like to change that by exhausting myself, with the help of TV and others, to provide a complete treatment of Matrix Algebra for Statistics. Additionally, since many other blogs have tackled the basics, I will be skipping most of the theory and computation of the 1st chapter of Harville, opting instead to list a few important concepts to carry forward.</description>
+    </item>
+    
+    <item>
+      <title>What&#39;s this all about?</title>
+      <link>/post/what-s-this-all-about/</link>
+      <pubDate>Tue, 03 Dec 2019 00:00:00 +0000</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>/post/what-s-this-all-about/</guid>
+      <description>Ralph WiggumFirst, why Ralph Wiggum? and Why “Learnding”? Watch this. If you don’t get it then stop reading.
+Why?This blog is an attempt to (re-)learn some of the maths involved in the wealth of statistics. These are things I’ve either forgotten about from graduate school or never paid attention to. I am doing this in collaboration with a colleague, Tony Van (or TV for short), and possibly others if they’re interested.</description>
+    </item>
+    
+    <item>
+      <title>About this weblog</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>/page/about/</guid>
+      <description>Ralph Wiggum First, why Ralph Wiggum? and Why &amp;ldquo;Learnding&amp;rdquo;? Watch this. If you don&#39;t get it then stop reading.
+Why? This blog is an attempt to (re-)learn some of the maths involved in the wealth of statistics. These are things I&#39;ve either forgotten about from graduate school or never paid attention to. I am doing this in collaboration with a colleague, Tony Van (or TV for short), and possibly others if they&#39;re interested.</description>
+    </item>
+    
+  </channel>
+</rss>

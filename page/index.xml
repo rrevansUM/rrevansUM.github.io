@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on I&#39;m Relearnding (and sometimes just learnding)</title>
+    <link>/page/</link>
+    <description>Recent content in Pages on I&#39;m Relearnding (and sometimes just learnding)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>revans.evans@gmail.com (Rich Evans)</managingEditor>
+    <webMaster>revans.evans@gmail.com (Rich Evans)</webMaster>
+    
+	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About this weblog</title>
+      <link>/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>revans.evans@gmail.com (Rich Evans)</author>
+      <guid>/page/about/</guid>
+      <description>Ralph Wiggum First, why Ralph Wiggum? and Why &amp;ldquo;Learnding&amp;rdquo;? Watch this. If you don&#39;t get it then stop reading.
+Why? This blog is an attempt to (re-)learn some of the maths involved in the wealth of statistics. These are things I&#39;ve either forgotten about from graduate school or never paid attention to. I am doing this in collaboration with a colleague, Tony Van (or TV for short), and possibly others if they&#39;re interested.</description>
+    </item>
+    
+  </channel>
+</rss>

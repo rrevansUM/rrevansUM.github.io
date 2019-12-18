@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Harville Chapter 1 - I&#39;m Relearnding (and sometimes just learnding)</title>
+  <meta name="description" content="IntroI’ve come across countless blogs (Detroit data lab, Data Science &#43;, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some time. In this blog I would like to change that by exhausting myself, with the help of TV and others, to provide a complete treatment of Matrix Algebra for Statistics. Additionally, since many other blogs have tackled the basics, I will be skipping most of the theory and computation of the 1st chapter of Harville, opting instead to list a few important concepts to carry forward.">
+  <meta name="author" content="Rich Evans"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "I\x27m Relearnding (and sometimes just learnding)",
+    
+    "url": "\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "\/post\/harville-chapter-1\/",
+          "name": "Harville chapter 1"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Rich Evans"
+  },
+  "headline": "Harville Chapter 1",
+  "description" : "Intro\rI’ve come across countless blogs (Detroit data lab, Data Science \x2b, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some time. In this blog I would like to change that by exhausting myself, with the help of TV and others, to provide a complete treatment of Matrix Algebra for Statistics. Additionally, since many other blogs have tackled the basics, I will be skipping most of the theory and computation of the 1st chapter of Harville, opting instead to list a few important concepts to carry forward.",
+  "inLanguage" : "en",
+  "wordCount":  3849 ,
+  "datePublished" : "2019-12-03T00:00:00",
+  "dateModified" : "2019-12-03T00:00:00",
+  "image" : "\/img\/ralph-icon.png",
+  "keywords" : [ "Linear Algebra, Matrices" ],
+  "mainEntityOfPage" : "\/post\/harville-chapter-1\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "\/img\/ralph-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Harville Chapter 1" />
+<meta property="og:description" content="IntroI’ve come across countless blogs (Detroit data lab, Data Science &#43;, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some time. In this blog I would like to change that by exhausting myself, with the help of TV and others, to provide a complete treatment of Matrix Algebra for Statistics. Additionally, since many other blogs have tackled the basics, I will be skipping most of the theory and computation of the 1st chapter of Harville, opting instead to list a few important concepts to carry forward.">
+<meta property="og:image" content="/img/ralph-icon.png" />
+<meta property="og:url" content="/post/harville-chapter-1/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="I&#39;m Relearnding (and sometimes just learnding)" />
+
+  <meta name="twitter:title" content="Harville Chapter 1" />
+  <meta name="twitter:description" content="IntroI’ve come across countless blogs (Detroit data lab, Data Science &#43;, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some …">
+  <meta name="twitter:image" content="/img/ralph-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='/img/favicon-ralph.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.60.1" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="I&#39;m Relearnding (and sometimes just learnding)"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="/css/highlight.min.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">I&#39;m Relearnding (and sometimes just learnding)</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="I&#39;m Relearnding (and sometimes just learnding)" href="/">
+            <img class="avatar-img" src="/img/ralph-icon.png" alt="I&#39;m Relearnding (and sometimes just learnding)" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Harville Chapter 1</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on December 3, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;19&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;3849&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Rich Evans
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+
+<div id="intro" class="section level1">
+<h1>Intro</h1>
+<p>I’ve come across countless blogs (<a href="https://detroitdatalab.com/">Detroit data lab</a>, <a href="https://datascienceplus.com/linear-algebra-in-r/">Data Science +</a>, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some time. In this blog I would like to change that by exhausting myself, with the help of TV and others, to provide a complete treatment of Matrix Algebra for Statistics. Additionally, since many other blogs have tackled the basics, I will be skipping most of the theory and computation of the 1st chapter of Harville, opting instead to list a few important concepts to carry forward. Without further adieu,</p>
+</div>
+<div id="harville-chapter-1-matrices" class="section level1">
+<h1>Harville, Chapter 1: Matrices</h1>
+<div id="notation" class="section level2">
+<h2>Notation</h2>
+<p>Matrices are usually denoted</p>
+<p><span class="math display">\[
+\textbf{A} = \{a_{ij}\} = \begin{pmatrix}
+a_{11} &amp; a_{12} &amp; ... &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; ... &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+a_{m1} &amp; a_{m2} &amp; ... &amp; a_{mn}
+\end{pmatrix}
+\]</span></p>
+<p>for <span class="math inline">\(i = 1,...,m\)</span> and <span class="math inline">\(j = 1, ..., n\)</span></p>
+</div>
+<div id="basic-notation" class="section level2">
+<h2>Basic Notation</h2>
+<p>Each <span class="math inline">\(\textbf{bold}\)</span> matrix will have lower case dimenions</p>
+<table>
+<thead>
+<tr class="header">
+<th>Matrix</th>
+<th>Dimensions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A</td>
+<td><span class="math inline">\(m \times n\)</span></td>
+</tr>
+<tr class="even">
+<td>B</td>
+<td><span class="math inline">\(p \times q\)</span></td>
+</tr>
+<tr class="odd">
+<td>C</td>
+<td><span class="math inline">\(s \times t\)</span></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Things to remember
+<ul>
+<li>Commutativity
+<ul>
+<li><span class="math inline">\(A+B=B+A\)</span> if <span class="math inline">\(dim(A)=dim(B)\)</span></li>
+</ul></li>
+<li>Associativity
+<ul>
+<li><span class="math inline">\(A+(B+C)=(A+B)+C\)</span> if <span class="math inline">\(dim(A)=dim(B)=dim(C)\)</span></li>
+</ul></li>
+<li>Scalar Multiplication
+<ul>
+<li><span class="math inline">\(c(A+B)=cA+cB\)</span></li>
+<li><span class="math inline">\((c+k)A=cA+kA\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>We can show all of these properties real easy in R (or really any language)</p>
+<pre class="r"><code>m &lt;- 8
+n &lt;- 4
+
+p &lt;- m
+q &lt;- n
+
+s &lt;- m
+t &lt;- n
+
+sampler &lt;- function(...) {
+  sample(1:10, 32, replace = TRUE)
+}
+
+A &lt;- matrix(sampler(), nrow = m, ncol = n)
+B &lt;- matrix(sampler(), nrow = p, ncol = q)
+C &lt;- matrix(sampler(), nrow = s, ncol = t)</code></pre>
+<p>Commutativity,</p>
+<pre class="r"><code>A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7    1    6    6
+## [2,]    9    1    4    3
+## [3,]    4    2    5    4
+## [4,]    9    9    7    9
+## [5,]    5    1    3    9
+## [6,]    9    1    2    5
+## [7,]    2    8    4    9
+## [8,]    7    8   10    6</code></pre>
+<pre class="r"><code>B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    8    7    9    6
+## [2,]    4    8    1    2
+## [3,]    3    7    3    1
+## [4,]    2    6    3    2
+## [5,]    7    8    8   10
+## [6,]    2    7    7    7
+## [7,]    3    5    2    9
+## [8,]    7    8    9    9</code></pre>
+<pre class="r"><code>A + B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]   15    8   15   12
+## [2,]   13    9    5    5
+## [3,]    7    9    8    5
+## [4,]   11   15   10   11
+## [5,]   12    9   11   19
+## [6,]   11    8    9   12
+## [7,]    5   13    6   18
+## [8,]   14   16   19   15</code></pre>
+<p>Associativity,</p>
+<pre class="r"><code>A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7    1    6    6
+## [2,]    9    1    4    3
+## [3,]    4    2    5    4
+## [4,]    9    9    7    9
+## [5,]    5    1    3    9
+## [6,]    9    1    2    5
+## [7,]    2    8    4    9
+## [8,]    7    8   10    6</code></pre>
+<pre class="r"><code>B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    8    7    9    6
+## [2,]    4    8    1    2
+## [3,]    3    7    3    1
+## [4,]    2    6    3    2
+## [5,]    7    8    8   10
+## [6,]    2    7    7    7
+## [7,]    3    5    2    9
+## [8,]    7    8    9    9</code></pre>
+<pre class="r"><code>C</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    2    9    7    1
+## [2,]    4    9    1   10
+## [3,]    3    8   10   10
+## [4,]    6    7    1    4
+## [5,]    4   10    1    3
+## [6,]    4    6   10    2
+## [7,]    8    7    2    9
+## [8,]    7    8    6    4</code></pre>
+<pre class="r"><code>all.equal(A + (B + C), (A + B) + C)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Scalar Multiplication,</p>
+<pre class="r"><code>A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7    1    6    6
+## [2,]    9    1    4    3
+## [3,]    4    2    5    4
+## [4,]    9    9    7    9
+## [5,]    5    1    3    9
+## [6,]    9    1    2    5
+## [7,]    2    8    4    9
+## [8,]    7    8   10    6</code></pre>
+<pre class="r"><code>B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    8    7    9    6
+## [2,]    4    8    1    2
+## [3,]    3    7    3    1
+## [4,]    2    6    3    2
+## [5,]    7    8    8   10
+## [6,]    2    7    7    7
+## [7,]    3    5    2    9
+## [8,]    7    8    9    9</code></pre>
+<pre class="r"><code>all.equal(2 * (A + B), 2 * A + 2 * B)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>These results are all extremely boring, it’s more fun when they fail,</p>
+<pre class="r"><code>D &lt;- matrix(sample(1:10, 4, replace = TRUE), nrow = 2, ncol = 2)
+
+tryCatch(A + D, error = function(e) e)</code></pre>
+<pre><code>## &lt;simpleError in A + D: non-conformable arrays&gt;</code></pre>
+<p>Still not all that interesting.</p>
+</div>
+<div id="matrix-multiplication" class="section level2">
+<h2>Matrix Multiplication</h2>
+<p>Let’s change B’s dimensions so that it can still conform with A (m=8, n=4)</p>
+<pre class="r"><code>B &lt;- matrix(sample(1:10, 16, replace = TRUE), nrow = 4, ncol = 8)</code></pre>
+<p>So the dimensions are not equal,</p>
+<pre class="r"><code>A %*% B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]  106  148  120  111  106  148  120  111
+## [2,]   97  134   86   87   97  134   86   87
+## [3,]   86  104  102   78   86  104  102   78
+## [4,]  213  196  232  185  213  196  232  185
+## [5,]   85  112  104  125   85  112  104  125
+## [6,]   91  122   78  103   91  122   78  103
+## [7,]  143  102  178  140  143  102  178  140
+## [8,]  200  195  230  147  200  195  230  147</code></pre>
+<p>An <span class="math inline">\(8 \times 8\)</span> matrix. It’s important in linear algebra two pay attention to both the dimensional calculus and the matrix arithmetic, always keeping in mind the number of rows and columns involved.</p>
+<p>Each element of the matrix product <span class="math inline">\(AB\)</span> is just a linear sum of the columns of <span class="math inline">\(A\)</span> by the rows of <span class="math inline">\(B\)</span>,</p>
+<p><span class="math display">\[
+\sum_{k=1}^na_{ik}b_{kj} = a_{i1}b_{1j} + a_{i2}b_{2j} + \dots + a_{in}b_{nj}
+\]</span></p>
+<p>So the <span class="math inline">\(ij\)</span>th element, 222 in <span class="math inline">\(AB\)</span> is <span class="math inline">\((6 \times 8) + (9 \times 10) + (8 \times 7) + (4 \times 7)\)</span> … pretty simple.</p>
+<p>Harville makes a distinction between <em>premultiplication</em> and <em>postmultiplication</em> for the matrix product <span class="math inline">\(AB\)</span>, the former being “<span class="math inline">\(B\)</span> times <span class="math inline">\(A\)</span>” and the later being “<span class="math inline">\(A\)</span> times <span class="math inline">\(B\)</span>”. I hardly think this matters but, maybe I’ll be surprised later on in the chapter.</p>
+<ul>
+<li>Matrix Multiplication Properties
+<ul>
+<li>Matrix Multiplication <strong>is Associative</strong>
+<ul>
+<li><span class="math inline">\(A(BC) = (AB)C\)</span> as long as <span class="math inline">\(C\)</span> is <span class="math inline">\(q \times t\)</span></li>
+</ul></li>
+<li>Matrix Multiplication <strong>is Distributive with respect to Addition</strong>
+<ul>
+<li><span class="math inline">\(A(B + C) = AB + AC\)</span></li>
+</ul></li>
+<li>Matrix Multiplication <strong>is not Commutative</strong>
+<ul>
+<li>in the general case, <span class="math inline">\(AB \ne BA\)</span></li>
+</ul></li>
+<li>Scalar Multiplication <strong>is a thing</strong>
+<ul>
+<li><span class="math inline">\(cA_1A_2 \cdots A_k = (cA_1)A_2 \cdots A_k = A_1(cA_2) \cdots A_k = A_1A_2 \cdots (cA_k)\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Commutativity of Matrix Multiplication should be explained a bit more in depth,</p>
+<pre class="r"><code>A %*% B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]  106  148  120  111  106  148  120  111
+## [2,]   97  134   86   87   97  134   86   87
+## [3,]   86  104  102   78   86  104  102   78
+## [4,]  213  196  232  185  213  196  232  185
+## [5,]   85  112  104  125   85  112  104  125
+## [6,]   91  122   78  103   91  122   78  103
+## [7,]  143  102  178  140  143  102  178  140
+## [8,]  200  195  230  147  200  195  230  147</code></pre>
+<pre class="r"><code>B %*% A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]  326  135  211  263
+## [2,]  262  190  254  348
+## [3,]  344  166  238  330
+## [4,]  304  244  275  305</code></pre>
+<p>Clearly these are very different matrices. Often matrix multiplication goes undefined for example, it is always the case that, for matrices <span class="math inline">\(\underset{m \times n}{A}\)</span> and <span class="math inline">\(\underset{p \times n}{B}\)</span> <span class="math inline">\(AB\)</span> is defined but <span class="math inline">\(BA\)</span> is not defined.</p>
+<pre class="r"><code>B &lt;- matrix(sample(1:10, size = 16, replace = TRUE), nrow = 4, ncol = 4)
+
+A %*% B # defined</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]  122  109   57   78
+## [2,]  126   90   44   68
+## [3,]   93   72   47   51
+## [4,]  233  158  133  115
+## [5,]   93  118   65   83
+## [6,]  120  104   52   78
+## [7,]  138  109  109   76
+## [8,]  212  124  110   89</code></pre>
+<pre class="r"><code>tryCatch(B %*% A, error = function(e) e)</code></pre>
+<pre><code>## &lt;simpleError in B %*% A: non-conformable arguments&gt;</code></pre>
+<p>Some square matrices <strong>can</strong> commute though, and collections of matrices can commute but only in pairs,</p>
+<p><span class="math display">\[A_iA_j = A_jA_i \quad for \quad j &gt; i = 1, 2, \dots\]</span></p>
+<p>Which may be important later.</p>
+</div>
+<div id="transposition" class="section level2">
+<h2>Transposition</h2>
+<p>transposing <span class="math inline">\(\underset{m \times n}{A}\)</span> basically rotates it, transforming it into <span class="math inline">\(\underset{n \times m}{A&#39;}\)</span></p>
+<pre class="r"><code>A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7    1    6    6
+## [2,]    9    1    4    3
+## [3,]    4    2    5    4
+## [4,]    9    9    7    9
+## [5,]    5    1    3    9
+## [6,]    9    1    2    5
+## [7,]    2    8    4    9
+## [8,]    7    8   10    6</code></pre>
+<pre class="r"><code>t(A)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]    7    9    4    9    5    9    2    7
+## [2,]    1    1    2    9    1    1    8    8
+## [3,]    6    4    5    7    3    2    4   10
+## [4,]    6    3    4    9    9    5    9    6</code></pre>
+<p>But matrix tranposes are like negations, negate a negation and you get the original thing,</p>
+<pre class="r"><code>all.equal(t(t(A)), A)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>If <span class="math inline">\(A+B\)</span> is defined then <span class="math inline">\((A+B)&#39;=A&#39;+B&#39;\)</span>.</p>
+<pre class="r"><code>B &lt;- matrix(sampler(), nrow = p, ncol = q)
+
+all.equal(t(A + B), t(A) + t(B))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Likewise, if <span class="math inline">\(AB\)</span> is defined then <span class="math inline">\((AB)&#39;=B&#39;A&#39;\)</span></p>
+<pre class="r"><code>B &lt;- matrix(sample(1:10, 16, replace = TRUE), nrow = 4, ncol = 4)
+
+all.equal(t(A %*% B), t(B) %*% t(A))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>So that’s weird right? Why must the product flip?</p>
+<pre class="r"><code>t(A %*% B)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]  137  122  110  250  102  108  161  247
+## [2,]   47   42   33   79   47   46   53   65
+## [3,]  107   74   87  215  115   82  177  190
+## [4,]  127  105   90  173  109  101  106  166</code></pre>
+<pre class="r"><code>t(B) %*% t(A)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]  137  122  110  250  102  108  161  247
+## [2,]   47   42   33   79   47   46   53   65
+## [3,]  107   74   87  215  115   82  177  190
+## [4,]  127  105   90  173  109  101  106  166</code></pre>
+<p>The <span class="math inline">\(ij\)</span>th element of <span class="math inline">\((AB)&#39;\)</span> is the <span class="math inline">\(ji\)</span>th element of <span class="math inline">\(AB\)</span></p>
+<pre class="r"><code>t(A %*% B)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]  137  122  110  250  102  108  161  247
+## [2,]   47   42   33   79   47   46   53   65
+## [3,]  107   74   87  215  115   82  177  190
+## [4,]  127  105   90  173  109  101  106  166</code></pre>
+<pre class="r"><code>A %*% B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]  137   47  107  127
+## [2,]  122   42   74  105
+## [3,]  110   33   87   90
+## [4,]  250   79  215  173
+## [5,]  102   47  115  109
+## [6,]  108   46   82  101
+## [7,]  161   53  177  106
+## [8,]  247   65  190  166</code></pre>
+</div>
+<div id="matrix-types" class="section level2">
+<h2>Matrix Types</h2>
+<div id="square-matrices" class="section level3">
+<h3>Square Matrices</h3>
+<p>We’ve already seen these,</p>
+<pre class="r"><code>D</code></pre>
+<pre><code>##      [,1] [,2]
+## [1,]    5    3
+## [2,]    4    9</code></pre>
+<p>The only interesting property of square matrices is that <span class="math inline">\(DD\)</span> is defined, or for any number of products <span class="math inline">\(k\)</span>, <span class="math inline">\(D^k=DD^{k-1}=DDD^{k-2}\)</span></p>
+<pre class="r"><code>D %*% D %*% D %*% D</code></pre>
+<pre><code>##      [,1]  [,2]
+## [1,] 3721  5460
+## [2,] 7280 11001</code></pre>
+</div>
+<div id="symmetric-matrices" class="section level3">
+<h3>Symmetric Matrices</h3>
+<p>if <span class="math inline">\(A=A&#39;\)</span> then it’s symmetric,</p>
+<pre class="r"><code>isSymmetric(A)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+</div>
+<div id="diagonal-matrices" class="section level3">
+<h3>Diagonal Matrices</h3>
+<p><span class="math display">\[
+\mathbf{D} =
+  \begin{pmatrix}
+    d_{11} &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; d_{22} &amp; \cdots &amp; 0 \\
+    \vdots &amp; &amp; \ddots &amp; \\
+    0 &amp; 0 &amp; \cdots &amp; d_{nn}
+  \end{pmatrix}
+\]</span></p>
+<p>Or sometimes just,</p>
+<p><span class="math display">\[
+\mathbf{D} =
+  \begin{pmatrix}
+    d_1 &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; d_2 &amp; \cdots &amp; 0 \\
+    \vdots &amp; &amp; \ddots &amp; \\
+    0 &amp; 0 &amp; \cdots &amp; d_n
+  \end{pmatrix} = diag(d_1, d_2, \dots, d_n)
+\]</span></p>
+<p>For <span class="math inline">\(\underset{m \times n}{A}\)</span> and <span class="math inline">\(diag(d_1, d_2, \dots, d_m)\)</span>, <span class="math inline">\(DA = d_ia_{ij}\)</span></p>
+<pre class="r"><code>D &lt;- diag(1:8, nrow = 8, ncol = 8)
+D</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
+## [1,]    1    0    0    0    0    0    0    0
+## [2,]    0    2    0    0    0    0    0    0
+## [3,]    0    0    3    0    0    0    0    0
+## [4,]    0    0    0    4    0    0    0    0
+## [5,]    0    0    0    0    5    0    0    0
+## [6,]    0    0    0    0    0    6    0    0
+## [7,]    0    0    0    0    0    0    7    0
+## [8,]    0    0    0    0    0    0    0    8</code></pre>
+<pre class="r"><code>D %*% A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7    1    6    6
+## [2,]   18    2    8    6
+## [3,]   12    6   15   12
+## [4,]   36   36   28   36
+## [5,]   25    5   15   45
+## [6,]   54    6   12   30
+## [7,]   14   56   28   63
+## [8,]   56   64   80   48</code></pre>
+<div id="identity-matrices" class="section level4">
+<h4>Identity Matrices</h4>
+<p>Identity matrices are diagonal matrices and thus, are only square</p>
+<p><span class="math display">\[
+\mathbf{I_n} =
+  \begin{pmatrix}
+    1 &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; 1 &amp; \cdots &amp; 0 \\
+    \vdots &amp; &amp; \ddots &amp; \\
+    0 &amp; 0 &amp; \cdots &amp; 1
+  \end{pmatrix}
+  = diag(1, 1, \dots, 1)
+\]</span></p>
+<p><span class="math inline">\(IA=AI=A\)</span> is always true when the dimensions are amenable.</p>
+<pre class="r"><code>I &lt;- diag(1, 4, 4)
+all.equal(I %*% B, B %*% I, B)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+</div>
+<div id="matrices-of-1s" class="section level3">
+<h3>Matrices of 1s</h3>
+<p><span class="math display">\[
+\mathbf{J_{mn}} =
+  \begin{pmatrix}
+    1 &amp; 1 &amp; \cdots &amp; 1 \\
+    1 &amp; 1 &amp; \cdots &amp; 1 \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    1 &amp; 1 &amp; \cdots &amp; 1
+  \end{pmatrix}
+  = J
+\]</span></p>
+<p>Harville makes note of the result <span class="math inline">\(J_{mn}J_{np}=nJ_{mp}\)</span>, which makes a lot of intuitive sense.</p>
+<pre class="r"><code>m &lt;- 4
+n &lt;- 5
+p &lt;- 3
+J_mn &lt;- matrix(rep(1, 20), nrow = m, ncol = n)
+J_np &lt;- matrix(rep(1, 15), nrow = n, ncol = p)
+(J_mn %*% J_np) / n</code></pre>
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    1    1
+## [2,]    1    1    1
+## [3,]    1    1    1
+## [4,]    1    1    1</code></pre>
+</div>
+<div id="null-matrices" class="section level3">
+<h3>Null Matrices</h3>
+<p><span class="math display">\[
+\mathbf{\textbf{0}} =
+  \begin{pmatrix}
+    0 &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; 0 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+    0 &amp; 0 &amp; \cdots &amp; 0
+  \end{pmatrix}
+\]</span></p>
+<p>You can probably guess that null matrices have intuitive properties and you’d be right,</p>
+<p><span class="math inline">\(\textbf{0A}=\textbf{A0}=\textbf{0}\)</span> if possible</p>
+<pre class="r"><code>nullMat &lt;- matrix(rep(0, 16), nrow = m, ncol = m)
+B %*% nullMat</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    0    0    0    0
+## [2,]    0    0    0    0
+## [3,]    0    0    0    0
+## [4,]    0    0    0    0</code></pre>
+<pre class="r"><code>nullMat %*% B</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    0    0    0    0
+## [2,]    0    0    0    0
+## [3,]    0    0    0    0
+## [4,]    0    0    0    0</code></pre>
+<p>For some scalar <span class="math inline">\(k\)</span>, <span class="math inline">\(k\textbf{0}=\textbf{0}\)</span></p>
+<p><span class="math display">\[
+\textbf{A} + \textbf{0}=\textbf{0} + \textbf{A} = \textbf{A} \\
+\textbf{A} - \textbf{A} = \textbf{0}
+\]</span></p>
+</div>
+<div id="triangular-matrices" class="section level3">
+<h3>Triangular Matrices</h3>
+<p>Triangular matrices must be square,</p>
+<p><span class="math display">\[
+\mathbf{\textbf{T}} =
+  \begin{pmatrix}
+    t_{11} &amp; t_{12} &amp; \cdots &amp; t_{1n} \\
+    0 &amp; t_{22} &amp; \cdots &amp; t_{2n} \\
+    \vdots &amp; &amp; \ddots &amp; \\
+    0 &amp; 0 &amp; \cdots &amp; t_{nn}
+  \end{pmatrix}
+\]</span></p>
+<p>If a matrix is both <strong>upper triangular</strong> and <strong>lower triangular</strong>, then it’s just a diagonal matrix. If you tranpose a triangular matrix it flips from lower (upper) to an upper (lower) triangular matrix,</p>
+<p><span class="math display">\[
+\mathbf{\textbf{T}&#39;} =
+  \begin{pmatrix}
+    t_{11} &amp; 0 &amp; \cdots &amp; 0 \\
+    t_{12} &amp; t_{22} &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \ddots &amp;\vdots  \\
+    t_{1n} &amp; t_{2n} &amp; \cdots &amp; t_{nn}
+  \end{pmatrix}
+\]</span></p>
+<pre class="r"><code>T.tri &lt;- B
+T.tri[upper.tri(T.tri)] &lt;- 0
+T.tri</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    7    0    0    0
+## [2,]   10    2    0    0
+## [3,]   10    1    5    0
+## [4,]    3    3    9    6</code></pre>
+<pre class="r"><code>T.tri + T.tri</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]   14    0    0    0
+## [2,]   20    4    0    0
+## [3,]   20    2   10    0
+## [4,]    6    6   18   12</code></pre>
+<p>Still lower triangular. Now for some important things to remember, at least when it comes to statistical mathematics, first <strong>triangular matrix multiplication</strong>,</p>
+<p>For two matrices <span class="math inline">\(\underset{n \times n}{\textbf{A}}, \underset{n \times n}{\textbf{B}}\)</span> that are both <strong>upper triangular</strong> (could be <strong>lower triangular</strong>), their premultiplication <span class="math inline">\(AB\)</span> would be upper triangular,</p>
+<pre class="r"><code>T.tri %*% T.tri</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]   49    0    0    0
+## [2,]   90    4    0    0
+## [3,]  130    7   25    0
+## [4,]  159   33   99   36</code></pre>
+<p>There’s a proof in the chapter for a result similar to this but theres really no merit in including it here.</p>
+<p><strong>Def.</strong> <em>unit triangular matrices</em> - a triangular matrix where the diagonal elements are all 1’s.</p>
+<p><span class="math display">\[
+\mathbf{\textbf{U}} =
+  \begin{pmatrix}
+    1 &amp; 0 &amp; \cdots &amp; 0 \\
+    t_{12} &amp; 1 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \ddots &amp;\vdots  \\
+    t_{1n} &amp; t_{2n} &amp; \cdots &amp; 1
+  \end{pmatrix}
+\]</span></p>
+</div>
+<div id="rowcolumn-vectors" class="section level3">
+<h3>Row/Column Vectors</h3>
+<p>These are self-explanatory,</p>
+<p>A row vector</p>
+<pre class="r"><code>a &lt;- matrix(1:5, nrow = 1, ncol = 5)
+a</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    2    3    4    5</code></pre>
+<p>A column vector</p>
+<pre class="r"><code>t(a)</code></pre>
+<pre><code>##      [,1]
+## [1,]    1
+## [2,]    2
+## [3,]    3
+## [4,]    4
+## [5,]    5</code></pre>
+<p>Common notation for <strong>identity row (column) vectors</strong> look like <span class="math inline">\(\textbf{1}_m\)</span> or <span class="math inline">\(\textbf{1}_n\)</span>. But check this out,</p>
+<pre class="r"><code>onesM &lt;- matrix(rep(1, m), nrow = m, ncol = 1)
+onesN &lt;- matrix(rep(1, n), nrow = 1, ncol = n)
+onesM %*% onesN</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5]
+## [1,]    1    1    1    1    1
+## [2,]    1    1    1    1    1
+## [3,]    1    1    1    1    1
+## [4,]    1    1    1    1    1</code></pre>
+<p>which is <span class="math inline">\(\textbf{1}_m \textbf{1}_n&#39; = \textbf{J}_{mn}\)</span></p>
+</div>
+<div id="x1-matrices" class="section level3">
+<h3>1x1 matrices</h3>
+<p>Basically, there could be <span class="math inline">\(\underset{1 \times 1}{\textbf{k}}\)</span> and <span class="math inline">\(k\)</span>, both are pretty much just a scalar but the reader should be aware that it may show up in some results.</p>
+</div>
+</div>
+<div id="exercises" class="section level2">
+<h2>Exercises</h2>
+<p>For most of these I can cheat and use R, down the line I’ll attempt to prove things on my own.</p>
+<div id="section" class="section level3">
+<h3>1.1</h3>
+<p><strong>Prove</strong>: <span class="math inline">\((A+B)+C=A+(B+C)\)</span></p>
+<p>I demonstrated this one above.</p>
+</div>
+<div id="section-1" class="section level3">
+<h3>1.2</h3>
+<p>Let <span class="math inline">\(A\)</span> represent an <span class="math inline">\(m \times n\)</span> matrix and <span class="math inline">\(B\)</span> an <span class="math inline">\(n \times p\)</span> matrix, and let <span class="math inline">\(c\)</span> and <span class="math inline">\(k\)</span> represent arbitrary scalars. Using results (2.9) and (2.1) (or other means), show that</p>
+<p><span class="math display">\[(cA)(kB) = ck(AB)\]</span></p>
+<pre class="r"><code>c &lt;- 2
+k &lt;- 10
+
+all.equal((c * A) %*% (k * B), (c * k) * (A %*% B))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="section-2" class="section level3">
+<h3>1.3</h3>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Verify result (2.6) (on the associativeness of matrix multiplication); that is, show that, for any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(A = \left\{ a_{ij} \right\}\)</span>, <span class="math inline">\(n \times q\)</span> matrix <span class="math inline">\(B = \left\{ b_{jk} \right\}\)</span>, and <span class="math inline">\(q \times r\)</span> matrix <span class="math inline">\(C = \left\{ c_{ks} \right\}\)</span>, <span class="math inline">\(A(BC) = (AB)C\)</span>.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Verify result (2.7) (on the distributiveness with respect to addition of matrix multiplication); that is, show that, for any <span class="math inline">\(m \times n\)</span> matrix <span class="math inline">\(A = \left\{ a_{ij} \right\}\)</span> and <span class="math inline">\(n×q\)</span> matrices <span class="math inline">\(B = \left\{b_{jk}\right\}\)</span> and <span class="math inline">\(C=\left\{c_{jk}\right\}\)</span>, <span class="math inline">\(A(B + C) = AB + AC\)</span>.</li>
+</ol></li>
+</ul>
+<p>I showed these above, with slightly different dimensions, but I think Harville was looking for more of a dimensional analysis like so, for part a,</p>
+<p><span class="math display">\[
+\begin{align}
+\sum_j a_{ij} \left( \sum_k b_{jk}c_{ks} \right) &amp; = \sum_j \left( \sum_k a_{ij}b_{jk}c_{ks} \right) \\
+&amp; = \sum_k \left(\sum_j a_{ij}b_{jk}c_{ks} \right) \\
+&amp; = \sum_k \left(\sum_ja_{ij}b_{jk} \right)c_{ks} \\
+&amp; = \left(\sum_ja_{ij}b_{jk} \right)\sum_kc_{ks}
+\end{align}
+\]</span></p>
+<p>Which should be pretty obvious. Part (b) will be pretty much the same kind of thing.</p>
+</div>
+<div id="section-3" class="section level3">
+<h3>1.4</h3>
+<p>Let <span class="math inline">\(A=\left\{a_{ij}\right\}\)</span> represent an <span class="math inline">\(m×n\)</span> matrix and <span class="math inline">\(B=\left\{b_{ij}\right\}\)</span> a <span class="math inline">\(p×m\)</span> matrix.</p>
+<p>Our matrix <span class="math inline">\(\textbf{A}\)</span> stored in <code>A</code> is 8, 4 (m = 8, n = 4). We’ll set <span class="math inline">\(\textbf{B}\)</span> to be be <span class="math inline">\(p \times m\)</span></p>
+<pre class="r"><code>p &lt;- 3
+m &lt;- 8
+B &lt;- matrix(sample(1:10, 24, replace = T), nrow = p, ncol = m)</code></pre>
+<p>(a.) Let <span class="math inline">\(\textbf{x}=\left\{x_i\right\}\)</span> represent an <span class="math inline">\(n\)</span>-dimensional column vector. Show that the <span class="math inline">\(i\)</span>th element of the <span class="math inline">\(p\)</span>-dimensional column vector <span class="math inline">\(\textbf{BAx}\)</span> is</p>
+<p><span class="math display">\[\sum_{j=1}^mb_{ij} \sum_{k=1}^na_{jk}x_k\]</span></p>
+<pre class="r"><code>n &lt;- ncol(A)
+x &lt;- matrix(sample(1:10, n, replace = T), nrow = n, ncol = 1)</code></pre>
+<p>So, what would <span class="math inline">\(\textbf{Ax}\)</span> look like,</p>
+<pre class="r"><code>A %*% x</code></pre>
+<pre><code>##      [,1]
+## [1,]  136
+## [2,]  110
+## [3,]  104
+## [4,]  262
+## [5,]  142
+## [6,]  122
+## [7,]  198
+## [8,]  222</code></pre>
+<p>The <span class="math inline">\(jk\)</span>th element is the sum across the columns of <span class="math inline">\(\textbf{A}\)</span> and the rows of <span class="math inline">\(\textbf{x}\)</span>, or similarly, the <span class="math inline">\(k\)</span>th row.</p>
+<pre class="r"><code>B %*% (A %*% x)</code></pre>
+<pre><code>##      [,1]
+## [1,] 9306
+## [2,] 6862
+## [3,] 6086</code></pre>
+<p>As <span class="math inline">\(\textbf{B}\)</span> has <span class="math inline">\(p\)</span> rows (in our case, 3), <span class="math inline">\(\textbf{BAx}\)</span> is a <span class="math inline">\(p\)</span>-dimensional column vector.</p>
+<p>parts (b)-(d) can be “solved” similarly and they’re not particularly interesting, so I will skip their demonstrations/solutions.</p>
+<p>(b.) Let <span class="math inline">\(\textbf{X} = \left\{x_{ij}}\right\}\)</span> represent an <span class="math inline">\(n × q\)</span> matrix. Generalize formula (E.1) by expressing the <span class="math inline">\(ir\)</span>th element of the <span class="math inline">\(p × q\)</span> matrix <span class="math inline">\(\textbf{BAX}\)</span> in terms of the elements of <span class="math inline">\(\textbf{A}\)</span>, <span class="math inline">\(\textbf{B}\)</span>, and <span class="math inline">\(\textbf{X}\)</span>.</p>
+<p>(c.) Let <span class="math inline">\(\textbf{x} = \left\{x_i\right\}\)</span> represent an <span class="math inline">\(n\)</span>-dimensional column vector and <span class="math inline">\(C=\left\{c_{ij}\right\}\)</span> a <span class="math inline">\(q × p\)</span> matrix. Generalize formula (E.1) by expressing the ith element of the q-dimensional column vector <span class="math inline">\(\textbf{CBAx}\)</span> in terms of the elements of <span class="math inline">\(\textbf{A}\)</span>, <span class="math inline">\(\textbf{B}\)</span>, <span class="math inline">\(\textbf{C}\)</span>, and <span class="math inline">\(\textbf{X}\)</span>.</p>
+<p>(d.) Let <span class="math inline">\(y=\left\{y_i\right\}\)</span> represent a <span class="math inline">\(p\)</span>-dimensional column vector. Express the <span class="math inline">\(i\)</span>th element of the <span class="math inline">\(n\)</span>-dimensional row vector <span class="math inline">\(y=BA\)</span> in terms of the elements of <span class="math inline">\(\textbf{A}\)</span>, <span class="math inline">\(\textbf{B}\)</span>, and <span class="math inline">\(\textbf{y}\)</span>.</p>
+</div>
+<div id="section-4" class="section level3">
+<h3>1.5</h3>
+<p>Let <span class="math inline">\(\textbf{A}\)</span> and <span class="math inline">\(\textbf{B}\)</span> both be <span class="math inline">\(m \times n\)</span> matrices, show that</p>
+<p><span class="math display">\[
+(\textbf{A} + \textbf{B})(\textbf{A}-\textbf{B}) = \textbf{A}^2-\textbf{B}^2
+\]</span></p>
+<p>Given that <span class="math inline">\(\textbf{A}\)</span> and <span class="math inline">\(\textbf{B}\)</span> commute. I think he means <span class="math inline">\(n \times n\)</span> matrices, as this would only make sense for <span class="math inline">\(m=n\)</span> scenarios.</p>
+<pre class="r"><code>n &lt;- 4
+A &lt;- matrix(1:16, nrow = n, ncol = n)
+B &lt;- matrix(1:16, nrow = n, ncol = n)</code></pre>
+<p>If they commute then <span class="math inline">\(\textbf{A}\textbf{B} = \textbf{B}\textbf{A}\)</span>. They would <strong>have</strong> to be square, they may not have to be identical.</p>
+<p>Because of the distributive-ness of matrix multiplication,</p>
+<p><span class="math display">\[
+\textbf{A}\textbf{A}-\textbf{A}\textbf{B}+\textbf{B}\textbf{A}-\textbf{B}\textbf{B} = \textbf{A}^2-\textbf{A}\textbf{B}+\textbf{B}\textbf{A} - \textbf{B}^2
+\]</span></p>
+<p>Which cannot be <span class="math inline">\(\textbf{A}^2-\textbf{B}^2\)</span> unless <span class="math inline">\(\textbf{A}\textbf{B} = \textbf{B}\textbf{A}\)</span> cuz then the middle term will cancel out. <span class="math inline">\(\textbf{Q.E.D.}\)</span> broh!</p>
+<p>Also,</p>
+<pre class="r"><code>A %*% B - B %*% A</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    0    0    0    0
+## [2,]    0    0    0    0
+## [3,]    0    0    0    0
+## [4,]    0    0    0    0</code></pre>
+</div>
+<div id="section-5" class="section level3">
+<h3>1.6</h3>
+<p>Show that the product <span class="math inline">\(\textbf{AB}\)</span> of two <span class="math inline">\(n×n\)</span> symmetric matrices <span class="math inline">\(\textbf{A}\)</span> and <span class="math inline">\(\textbf{B}\)</span> is itself symmetric <em>iff</em> <span class="math inline">\(\textbf{A}\)</span> and <span class="math inline">\(\textbf{B}\)</span> commute.</p>
+<pre class="r"><code>A &lt;- Matrix::forceSymmetric(A)
+B &lt;- Matrix::forceSymmetric(B)
+
+A</code></pre>
+<pre><code>## 4 x 4 Matrix of class &quot;dsyMatrix&quot;
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    5    9   13
+## [2,]    5    6   10   14
+## [3,]    9   10   11   15
+## [4,]   13   14   15   16</code></pre>
+</div>
+</div>
+</div>
+<div id="appendix" class="section level1">
+<h1>Appendix</h1>
+<div id="session-info" class="section level2">
+<h2>Session Info</h2>
+<pre><code>## R version 3.6.1 (2019-07-05)
+## Platform: x86_64-w64-mingw32/x64 (64-bit)
+## Running under: Windows 10 x64 (build 18362)
+## 
+## Matrix products: default
+## 
+## locale:
+## [1] LC_COLLATE=English_United States.1252 
+## [2] LC_CTYPE=English_United States.1252   
+## [3] LC_MONETARY=English_United States.1252
+## [4] LC_NUMERIC=C                          
+## [5] LC_TIME=English_United States.1252    
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## loaded via a namespace (and not attached):
+##  [1] Rcpp_1.0.1      bookdown_0.16   lattice_0.20-38 digest_0.6.19  
+##  [5] grid_3.6.1      magrittr_1.5    evaluate_0.14   blogdown_0.17  
+##  [9] stringi_1.4.3   Matrix_1.2-18   rmarkdown_1.18  tools_3.6.1    
+## [13] stringr_1.4.0   xfun_0.11       yaml_2.2.0      compiler_3.6.1 
+## [17] htmltools_0.3.6 knitr_1.26</code></pre>
+</div>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="//tags/linear-algebra/">Linear Algebra</a>&nbsp;
+            
+              <a href="//tags/matrices/">Matrices</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=%2fpost%2fharville-chapter-1%2f&amp;text=Harville%20Chapter%201&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=%2fpost%2fharville-chapter-1%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=%2fpost%2fharville-chapter-1%2f&amp;title=Harville%20Chapter%201" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=%2fpost%2fharville-chapter-1%2f&amp;title=Harville%20Chapter%201" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=%2fpost%2fharville-chapter-1%2f&amp;title=Harville%20Chapter%201" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fpost%2fharville-chapter-1%2f&amp;description=Harville%20Chapter%201" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="/post/what-s-this-all-about/" data-toggle="tooltip" data-placement="top" title="What&#39;s this all about?">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:revans.evans@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/username" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Rich Evans
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2019
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">I&#39;m Relearnding (and sometimes just learnding)</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.60.1</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="/js/main.js"></script>
+<script src="/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
