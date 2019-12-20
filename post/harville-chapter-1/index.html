@@ -59,7 +59,7 @@
   "headline": "Harville Chapter 1",
   "description" : "Intro\rI’ve come across countless blogs (Detroit data lab, Data Science \x2b, many others) attempting to cover the breadth of linear algebra using R, but each and every one of them peters out after some time. In this blog I would like to change that by exhausting myself, with the help of TV and others, to provide a complete treatment of Matrix Algebra for Statistics. Additionally, since many other blogs have tackled the basics, I will be skipping most of the theory and computation of the 1st chapter of Harville, opting instead to list a few important concepts to carry forward.",
   "inLanguage" : "en",
-  "wordCount":  3849 ,
+  "wordCount":  4350 ,
   "datePublished" : "2019-12-03T00:00:00",
   "dateModified" : "2019-12-03T00:00:00",
   "image" : "\/img\/ralph-icon.png",
@@ -243,10 +243,10 @@
   <i class="fas fa-calendar"></i>&nbsp;Posted on December 3, 2019
   
   
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;19&nbsp;minutes
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;21&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;3849&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;4350&nbsp;words
   
   
     
@@ -356,88 +356,88 @@ C &lt;- matrix(sampler(), nrow = s, ncol = t)</code></pre>
 <p>Commutativity,</p>
 <pre class="r"><code>A</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    7    1    6    6
-## [2,]    9    1    4    3
-## [3,]    4    2    5    4
-## [4,]    9    9    7    9
-## [5,]    5    1    3    9
-## [6,]    9    1    2    5
-## [7,]    2    8    4    9
-## [8,]    7    8   10    6</code></pre>
+## [1,]   10    1    2    5
+## [2,]   10    4    6    8
+## [3,]   10    7   10    1
+## [4,]    2    2    2    1
+## [5,]    5    4    2    3
+## [6,]   10    1    9    2
+## [7,]    9   10    2   10
+## [8,]    6    7    5    8</code></pre>
 <pre class="r"><code>B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    8    7    9    6
-## [2,]    4    8    1    2
-## [3,]    3    7    3    1
-## [4,]    2    6    3    2
-## [5,]    7    8    8   10
-## [6,]    2    7    7    7
-## [7,]    3    5    2    9
-## [8,]    7    8    9    9</code></pre>
+## [1,]    2    8    8    8
+## [2,]    9   10    6    5
+## [3,]   10    2    7    2
+## [4,]    4    3    1    7
+## [5,]    4    2    7    7
+## [6,]    4    9    6    4
+## [7,]    1    8    4    2
+## [8,]    1    8    2    5</code></pre>
 <pre class="r"><code>A + B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]   15    8   15   12
-## [2,]   13    9    5    5
-## [3,]    7    9    8    5
-## [4,]   11   15   10   11
-## [5,]   12    9   11   19
-## [6,]   11    8    9   12
-## [7,]    5   13    6   18
-## [8,]   14   16   19   15</code></pre>
+## [1,]   12    9   10   13
+## [2,]   19   14   12   13
+## [3,]   20    9   17    3
+## [4,]    6    5    3    8
+## [5,]    9    6    9   10
+## [6,]   14   10   15    6
+## [7,]   10   18    6   12
+## [8,]    7   15    7   13</code></pre>
 <p>Associativity,</p>
 <pre class="r"><code>A</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    7    1    6    6
-## [2,]    9    1    4    3
-## [3,]    4    2    5    4
-## [4,]    9    9    7    9
-## [5,]    5    1    3    9
-## [6,]    9    1    2    5
-## [7,]    2    8    4    9
-## [8,]    7    8   10    6</code></pre>
+## [1,]   10    1    2    5
+## [2,]   10    4    6    8
+## [3,]   10    7   10    1
+## [4,]    2    2    2    1
+## [5,]    5    4    2    3
+## [6,]   10    1    9    2
+## [7,]    9   10    2   10
+## [8,]    6    7    5    8</code></pre>
 <pre class="r"><code>B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    8    7    9    6
-## [2,]    4    8    1    2
-## [3,]    3    7    3    1
-## [4,]    2    6    3    2
-## [5,]    7    8    8   10
-## [6,]    2    7    7    7
-## [7,]    3    5    2    9
-## [8,]    7    8    9    9</code></pre>
+## [1,]    2    8    8    8
+## [2,]    9   10    6    5
+## [3,]   10    2    7    2
+## [4,]    4    3    1    7
+## [5,]    4    2    7    7
+## [6,]    4    9    6    4
+## [7,]    1    8    4    2
+## [8,]    1    8    2    5</code></pre>
 <pre class="r"><code>C</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    2    9    7    1
-## [2,]    4    9    1   10
-## [3,]    3    8   10   10
-## [4,]    6    7    1    4
-## [5,]    4   10    1    3
-## [6,]    4    6   10    2
-## [7,]    8    7    2    9
-## [8,]    7    8    6    4</code></pre>
+## [1,]    1   10    5    1
+## [2,]    8    8    2    8
+## [3,]    1    4    2    5
+## [4,]    9    7    8    1
+## [5,]    8    7   10    3
+## [6,]    4    5    4    4
+## [7,]    7    3    4    9
+## [8,]    3    4    7    1</code></pre>
 <pre class="r"><code>all.equal(A + (B + C), (A + B) + C)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <p>Scalar Multiplication,</p>
 <pre class="r"><code>A</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    7    1    6    6
-## [2,]    9    1    4    3
-## [3,]    4    2    5    4
-## [4,]    9    9    7    9
-## [5,]    5    1    3    9
-## [6,]    9    1    2    5
-## [7,]    2    8    4    9
-## [8,]    7    8   10    6</code></pre>
+## [1,]   10    1    2    5
+## [2,]   10    4    6    8
+## [3,]   10    7   10    1
+## [4,]    2    2    2    1
+## [5,]    5    4    2    3
+## [6,]   10    1    9    2
+## [7,]    9   10    2   10
+## [8,]    6    7    5    8</code></pre>
 <pre class="r"><code>B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    8    7    9    6
-## [2,]    4    8    1    2
-## [3,]    3    7    3    1
-## [4,]    2    6    3    2
-## [5,]    7    8    8   10
-## [6,]    2    7    7    7
-## [7,]    3    5    2    9
-## [8,]    7    8    9    9</code></pre>
+## [1,]    2    8    8    8
+## [2,]    9   10    6    5
+## [3,]   10    2    7    2
+## [4,]    4    3    1    7
+## [5,]    4    2    7    7
+## [6,]    4    9    6    4
+## [7,]    1    8    4    2
+## [8,]    1    8    2    5</code></pre>
 <pre class="r"><code>all.equal(2 * (A + B), 2 * A + 2 * B)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <p>These results are all extremely boring, it’s more fun when they fail,</p>
@@ -454,14 +454,14 @@ tryCatch(A + D, error = function(e) e)</code></pre>
 <p>So the dimensions are not equal,</p>
 <pre class="r"><code>A %*% B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]  106  148  120  111  106  148  120  111
-## [2,]   97  134   86   87   97  134   86   87
-## [3,]   86  104  102   78   86  104  102   78
-## [4,]  213  196  232  185  213  196  232  185
-## [5,]   85  112  104  125   85  112  104  125
-## [6,]   91  122   78  103   91  122   78  103
-## [7,]  143  102  178  140  143  102  178  140
-## [8,]  200  195  230  147  200  195  230  147</code></pre>
+## [1,]  104   46  101  122  104   46  101  122
+## [2,]  128   96  162  148  128   96  162  148
+## [3,]  142  136  183  144  142  136  183  144
+## [4,]   31   31   44   33   31   31   44   33
+## [5,]   66   49   84   75   66   49   84   75
+## [6,]  122   99  138  127  122   99  138  127
+## [7,]  127   94  178  154  127   94  178  154
+## [8,]   98   95  152  115   98   95  152  115</code></pre>
 <p>An <span class="math inline">\(8 \times 8\)</span> matrix. It’s important in linear algebra two pay attention to both the dimensional calculus and the matrix arithmetic, always keeping in mind the number of rows and columns involved.</p>
 <p>Each element of the matrix product <span class="math inline">\(AB\)</span> is just a linear sum of the columns of <span class="math inline">\(A\)</span> by the rows of <span class="math inline">\(B\)</span>,</p>
 <p><span class="math display">\[
@@ -493,33 +493,33 @@ tryCatch(A + D, error = function(e) e)</code></pre>
 <p>Commutativity of Matrix Multiplication should be explained a bit more in depth,</p>
 <pre class="r"><code>A %*% B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]  106  148  120  111  106  148  120  111
-## [2,]   97  134   86   87   97  134   86   87
-## [3,]   86  104  102   78   86  104  102   78
-## [4,]  213  196  232  185  213  196  232  185
-## [5,]   85  112  104  125   85  112  104  125
-## [6,]   91  122   78  103   91  122   78  103
-## [7,]  143  102  178  140  143  102  178  140
-## [8,]  200  195  230  147  200  195  230  147</code></pre>
+## [1,]  104   46  101  122  104   46  101  122
+## [2,]  128   96  162  148  128   96  162  148
+## [3,]  142  136  183  144  142  136  183  144
+## [4,]   31   31   44   33   31   31   44   33
+## [5,]   66   49   84   75   66   49   84   75
+## [6,]  122   99  138  127  122   99  138  127
+## [7,]  127   94  178  154  127   94  178  154
+## [8,]   98   95  152  115   98   95  152  115</code></pre>
 <pre class="r"><code>B %*% A</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]  326  135  211  263
-## [2,]  262  190  254  348
-## [3,]  344  166  238  330
-## [4,]  304  244  275  305</code></pre>
+## [1,]  369  247  208  248
+## [2,]  302  186  192  178
+## [3,]  354  192  230  199
+## [4,]  135  105   88   89</code></pre>
 <p>Clearly these are very different matrices. Often matrix multiplication goes undefined for example, it is always the case that, for matrices <span class="math inline">\(\underset{m \times n}{A}\)</span> and <span class="math inline">\(\underset{p \times n}{B}\)</span> <span class="math inline">\(AB\)</span> is defined but <span class="math inline">\(BA\)</span> is not defined.</p>
 <pre class="r"><code>B &lt;- matrix(sample(1:10, size = 16, replace = TRUE), nrow = 4, ncol = 4)
 
 A %*% B # defined</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]  122  109   57   78
-## [2,]  126   90   44   68
-## [3,]   93   72   47   51
-## [4,]  233  158  133  115
-## [5,]   93  118   65   83
-## [6,]  120  104   52   78
-## [7,]  138  109  109   76
-## [8,]  212  124  110   89</code></pre>
+## [1,]  114  124   94  104
+## [2,]  200  192  160  184
+## [3,]  186  220  136  184
+## [4,]   50   52   35   48
+## [5,]   98  100   64   92
+## [6,]  140  168  130  136
+## [7,]  232  208  145  212
+## [8,]  200  176  142  184</code></pre>
 <pre class="r"><code>tryCatch(B %*% A, error = function(e) e)</code></pre>
 <pre><code>## &lt;simpleError in B %*% A: non-conformable arguments&gt;</code></pre>
 <p>Some square matrices <strong>can</strong> commute though, and collections of matrices can commute but only in pairs,</p>
@@ -531,20 +531,20 @@ A %*% B # defined</code></pre>
 <p>transposing <span class="math inline">\(\underset{m \times n}{A}\)</span> basically rotates it, transforming it into <span class="math inline">\(\underset{n \times m}{A&#39;}\)</span></p>
 <pre class="r"><code>A</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    7    1    6    6
-## [2,]    9    1    4    3
-## [3,]    4    2    5    4
-## [4,]    9    9    7    9
-## [5,]    5    1    3    9
-## [6,]    9    1    2    5
-## [7,]    2    8    4    9
-## [8,]    7    8   10    6</code></pre>
+## [1,]   10    1    2    5
+## [2,]   10    4    6    8
+## [3,]   10    7   10    1
+## [4,]    2    2    2    1
+## [5,]    5    4    2    3
+## [6,]   10    1    9    2
+## [7,]    9   10    2   10
+## [8,]    6    7    5    8</code></pre>
 <pre class="r"><code>t(A)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]    7    9    4    9    5    9    2    7
-## [2,]    1    1    2    9    1    1    8    8
-## [3,]    6    4    5    7    3    2    4   10
-## [4,]    6    3    4    9    9    5    9    6</code></pre>
+## [1,]   10   10   10    2    5   10    9    6
+## [2,]    1    4    7    2    4    1   10    7
+## [3,]    2    6   10    2    2    9    2    5
+## [4,]    5    8    1    1    3    2   10    8</code></pre>
 <p>But matrix tranposes are like negations, negate a negation and you get the original thing,</p>
 <pre class="r"><code>all.equal(t(t(A)), A)</code></pre>
 <pre><code>## [1] TRUE</code></pre>
@@ -561,33 +561,33 @@ all.equal(t(A %*% B), t(B) %*% t(A))</code></pre>
 <p>So that’s weird right? Why must the product flip?</p>
 <pre class="r"><code>t(A %*% B)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]  137  122  110  250  102  108  161  247
-## [2,]   47   42   33   79   47   46   53   65
-## [3,]  107   74   87  215  115   82  177  190
-## [4,]  127  105   90  173  109  101  106  166</code></pre>
+## [1,]   71  128  145   34   57  122  115  116
+## [2,]   88  136   84   26   59   79  153  127
+## [3,]  100  142  124   32   70  103  160  127
+## [4,]  160  242  234   57  112  203  241  211</code></pre>
 <pre class="r"><code>t(B) %*% t(A)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]  137  122  110  250  102  108  161  247
-## [2,]   47   42   33   79   47   46   53   65
-## [3,]  107   74   87  215  115   82  177  190
-## [4,]  127  105   90  173  109  101  106  166</code></pre>
+## [1,]   71  128  145   34   57  122  115  116
+## [2,]   88  136   84   26   59   79  153  127
+## [3,]  100  142  124   32   70  103  160  127
+## [4,]  160  242  234   57  112  203  241  211</code></pre>
 <p>The <span class="math inline">\(ij\)</span>th element of <span class="math inline">\((AB)&#39;\)</span> is the <span class="math inline">\(ji\)</span>th element of <span class="math inline">\(AB\)</span></p>
 <pre class="r"><code>t(A %*% B)</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8]
-## [1,]  137  122  110  250  102  108  161  247
-## [2,]   47   42   33   79   47   46   53   65
-## [3,]  107   74   87  215  115   82  177  190
-## [4,]  127  105   90  173  109  101  106  166</code></pre>
+## [1,]   71  128  145   34   57  122  115  116
+## [2,]   88  136   84   26   59   79  153  127
+## [3,]  100  142  124   32   70  103  160  127
+## [4,]  160  242  234   57  112  203  241  211</code></pre>
 <pre class="r"><code>A %*% B</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]  137   47  107  127
-## [2,]  122   42   74  105
-## [3,]  110   33   87   90
-## [4,]  250   79  215  173
-## [5,]  102   47  115  109
-## [6,]  108   46   82  101
-## [7,]  161   53  177  106
-## [8,]  247   65  190  166</code></pre>
+## [1,]   71   88  100  160
+## [2,]  128  136  142  242
+## [3,]  145   84  124  234
+## [4,]   34   26   32   57
+## [5,]   57   59   70  112
+## [6,]  122   79  103  203
+## [7,]  115  153  160  241
+## [8,]  116  127  127  211</code></pre>
 </div>
 <div id="matrix-types" class="section level2">
 <h2>Matrix Types</h2>
@@ -596,13 +596,13 @@ all.equal(t(A %*% B), t(B) %*% t(A))</code></pre>
 <p>We’ve already seen these,</p>
 <pre class="r"><code>D</code></pre>
 <pre><code>##      [,1] [,2]
-## [1,]    5    3
-## [2,]    4    9</code></pre>
+## [1,]    9    3
+## [2,]   10    1</code></pre>
 <p>The only interesting property of square matrices is that <span class="math inline">\(DD\)</span> is defined, or for any number of products <span class="math inline">\(k\)</span>, <span class="math inline">\(D^k=DD^{k-1}=DDD^{k-2}\)</span></p>
 <pre class="r"><code>D %*% D %*% D %*% D</code></pre>
-<pre><code>##      [,1]  [,2]
-## [1,] 3721  5460
-## [2,] 7280 11001</code></pre>
+<pre><code>##       [,1] [,2]
+## [1,] 15321 4260
+## [2,] 14200 3961</code></pre>
 </div>
 <div id="symmetric-matrices" class="section level3">
 <h3>Symmetric Matrices</h3>
@@ -645,14 +645,14 @@ D</code></pre>
 ## [8,]    0    0    0    0    0    0    0    8</code></pre>
 <pre class="r"><code>D %*% A</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    7    1    6    6
-## [2,]   18    2    8    6
-## [3,]   12    6   15   12
-## [4,]   36   36   28   36
-## [5,]   25    5   15   45
-## [6,]   54    6   12   30
-## [7,]   14   56   28   63
-## [8,]   56   64   80   48</code></pre>
+## [1,]   10    1    2    5
+## [2,]   20    8   12   16
+## [3,]   30   21   30    3
+## [4,]    8    8    8    4
+## [5,]   25   20   10   15
+## [6,]   60    6   54   12
+## [7,]   63   70   14   70
+## [8,]   48   56   40   64</code></pre>
 <div id="identity-matrices" class="section level4">
 <h4>Identity Matrices</h4>
 <p>Identity matrices are diagonal matrices and thus, are only square</p>
@@ -755,24 +755,24 @@ B %*% nullMat</code></pre>
 T.tri[upper.tri(T.tri)] &lt;- 0
 T.tri</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    7    0    0    0
-## [2,]   10    2    0    0
-## [3,]   10    1    5    0
-## [4,]    3    3    9    6</code></pre>
+## [1,]    3    0    0    0
+## [2,]    3    2    0    0
+## [3,]    9    3    3    0
+## [4,]    4   10    6    9</code></pre>
 <pre class="r"><code>T.tri + T.tri</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]   14    0    0    0
-## [2,]   20    4    0    0
-## [3,]   20    2   10    0
-## [4,]    6    6   18   12</code></pre>
+## [1,]    6    0    0    0
+## [2,]    6    4    0    0
+## [3,]   18    6    6    0
+## [4,]    8   20   12   18</code></pre>
 <p>Still lower triangular. Now for some important things to remember, at least when it comes to statistical mathematics, first <strong>triangular matrix multiplication</strong>,</p>
 <p>For two matrices <span class="math inline">\(\underset{n \times n}{\textbf{A}}, \underset{n \times n}{\textbf{B}}\)</span> that are both <strong>upper triangular</strong> (could be <strong>lower triangular</strong>), their premultiplication <span class="math inline">\(AB\)</span> would be upper triangular,</p>
 <pre class="r"><code>T.tri %*% T.tri</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]   49    0    0    0
-## [2,]   90    4    0    0
-## [3,]  130    7   25    0
-## [4,]  159   33   99   36</code></pre>
+## [1,]    9    0    0    0
+## [2,]   15    4    0    0
+## [3,]   63   15    9    0
+## [4,]  132  128   72   81</code></pre>
 <p>There’s a proof in the chapter for a result similar to this but theres really no merit in including it here.</p>
 <p><strong>Def.</strong> <em>unit triangular matrices</em> - a triangular matrix where the diagonal elements are all 1’s.</p>
 <p><span class="math display">\[
@@ -870,20 +870,20 @@ x &lt;- matrix(sample(1:10, n, replace = T), nrow = n, ncol = 1)</code></pre>
 <p>So, what would <span class="math inline">\(\textbf{Ax}\)</span> look like,</p>
 <pre class="r"><code>A %*% x</code></pre>
 <pre><code>##      [,1]
-## [1,]  136
-## [2,]  110
-## [3,]  104
-## [4,]  262
-## [5,]  142
-## [6,]  122
-## [7,]  198
-## [8,]  222</code></pre>
+## [1,]  112
+## [2,]  182
+## [3,]  192
+## [4,]   48
+## [5,]   94
+## [6,]  143
+## [7,]  208
+## [8,]  175</code></pre>
 <p>The <span class="math inline">\(jk\)</span>th element is the sum across the columns of <span class="math inline">\(\textbf{A}\)</span> and the rows of <span class="math inline">\(\textbf{x}\)</span>, or similarly, the <span class="math inline">\(k\)</span>th row.</p>
 <pre class="r"><code>B %*% (A %*% x)</code></pre>
 <pre><code>##      [,1]
-## [1,] 9306
-## [2,] 6862
-## [3,] 6086</code></pre>
+## [1,] 4393
+## [2,] 3929
+## [3,] 7493</code></pre>
 <p>As <span class="math inline">\(\textbf{B}\)</span> has <span class="math inline">\(p\)</span> rows (in our case, 3), <span class="math inline">\(\textbf{BAx}\)</span> is a <span class="math inline">\(p\)</span>-dimensional column vector.</p>
 <p>parts (b)-(d) can be “solved” similarly and they’re not particularly interesting, so I will skip their demonstrations/solutions.</p>
 <p>(b.) Let <span class="math inline">\(\textbf{X} = \left\{x_{ij}}\right\}\)</span> represent an <span class="math inline">\(n × q\)</span> matrix. Generalize formula (E.1) by expressing the <span class="math inline">\(ir\)</span>th element of the <span class="math inline">\(p × q\)</span> matrix <span class="math inline">\(\textbf{BAX}\)</span> in terms of the elements of <span class="math inline">\(\textbf{A}\)</span>, <span class="math inline">\(\textbf{B}\)</span>, and <span class="math inline">\(\textbf{X}\)</span>.</p>
@@ -920,13 +920,101 @@ B &lt;- matrix(1:16, nrow = n, ncol = n)</code></pre>
 <pre class="r"><code>A &lt;- Matrix::forceSymmetric(A)
 B &lt;- Matrix::forceSymmetric(B)
 
-A</code></pre>
+Matrix::isSymmetric(A %*% B) &amp;&amp; all.equal(A %*% B, B %*% A)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>Have to show <strong>(a)</strong> Product of symmetric matrices <span class="math inline">\(\textbf{A, B}\)</span> (<span class="math inline">\(\textbf{AB}\)</span>) is symmetric and therefore <span class="math inline">\(\textbf{A}\)</span> and <span class="math inline">\(\textbf{B}\)</span> commute, and <strong>(B)</strong> if <span class="math inline">\(\textbf{A}\)</span> and <span class="math inline">\(\textbf{B}\)</span> commute and are symmetric, then their product <span class="math inline">\(\textbf{AB}\)</span> is symmetric.</p>
+<p><strong>(a)</strong> <span class="math inline">\(\textbf{AB}\)</span> = <span class="math inline">\((\textbf{AB})^{\prime}\)</span> = <span class="math inline">\(\textbf{B}^\prime \textbf{A}^\prime\)</span> = <span class="math inline">\(\textbf{BA}\)</span> So, they commute.</p>
+<p>Since I’ve forgotten,</p>
+<pre class="r"><code>all.equal(
+  as.matrix(A %*% B), 
+  t(as.matrix(A %*% B)), 
+  t(as.matrix(B)) %*% t(as.matrix(A)),
+  as.matrix(B %*% A)
+)</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p><strong>(b)</strong> by conjecture <span class="math inline">\(\textbf{AB} = \textbf{BA}\)</span> (commute) and we know that if <span class="math inline">\(\textbf{AB} = \textbf{(AB)}^\prime\)</span> then the product is symmetric.</p>
+<pre class="r"><code>all.equal(as.matrix(A %*% B), t(as.matrix(A %*% B)))</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>The second part of this question involves finding an example of symmetric <span class="math inline">\(\textbf{A,B}\)</span> where <span class="math inline">\(\textbf{AB}\)</span> is not symmetric.</p>
+<pre class="r"><code>A</code></pre>
 <pre><code>## 4 x 4 Matrix of class &quot;dsyMatrix&quot;
 ##      [,1] [,2] [,3] [,4]
 ## [1,]    1    5    9   13
 ## [2,]    5    6   10   14
 ## [3,]    9   10   11   15
 ## [4,]   13   14   15   16</code></pre>
+<pre class="r"><code>B &lt;- matrix(sample(1:10, 16, replace = TRUE), nrow = n, ncol = n)
+B &lt;- Matrix::forceSymmetric(B)
+B</code></pre>
+<pre><code>## 4 x 4 Matrix of class &quot;dsyMatrix&quot;
+##      [,1] [,2] [,3] [,4]
+## [1,]    5   10    2    9
+## [2,]   10    9    8    8
+## [3,]    2    8   10    9
+## [4,]    9    8    9    8</code></pre>
+<pre class="r"><code>Matrix::isSymmetric(A %*% B)</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+</div>
+<div id="section-6" class="section level3">
+<h3>1.7</h3>
+<p>Triangular Matrix <span class="math inline">\(\textbf{T}\)</span> and <span class="math inline">\(\textbf{T}^\prime\)</span>,</p>
+<pre class="r"><code>T.tri</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    3    0    0    0
+## [2,]    3    2    0    0
+## [3,]    9    3    3    0
+## [4,]    4   10    6    9</code></pre>
+<pre class="r"><code>t(T.tri)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    3    3    9    4
+## [2,]    0    2    3   10
+## [3,]    0    0    3    6
+## [4,]    0    0    0    9</code></pre>
+<pre class="r"><code>T.tri + T.tri</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    6    0    0    0
+## [2,]    6    4    0    0
+## [3,]   18    6    6    0
+## [4,]    8   20   12   18</code></pre>
+</div>
+<div id="section-7" class="section level3">
+<h3>1.8</h3>
+<p>Let <span class="math inline">\(\textbf{A}=\left\{a_{ij}\right\}\)</span> represent an <span class="math inline">\(n × n\)</span> upper triangular matrix, and suppose that the diagonal elements of <span class="math inline">\(\textbf{A}\)</span> equal zero.</p>
+<pre class="r"><code>T.tri &lt;- A
+T.tri[lower.tri(T.tri)] &lt;- 0
+T.tri &lt;- as.matrix(T.tri)
+T.tri[diag(T.tri)] &lt;- 0
+T.tri</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    0    5    9   13
+## [2,]    0    0   10   14
+## [3,]    0    0    0   15
+## [4,]    0    0    0    0</code></pre>
+<p>Show that, for <span class="math inline">\(i = 1,\dots,n\)</span> and <span class="math inline">\(j = 1,\dots,\min(n, i + p − 1)\)</span>, the <span class="math inline">\(ij\)</span>th element of <span class="math inline">\(\textbf{A}^p\)</span> equals zero.</p>
+<pre class="r"><code>p &lt;- 4
+n &lt;- 4
+
+for (i in 1:n) {
+  for (j in 1:min(n, i + p - 1)) {
+    print(paste0(&quot;(&quot;, i, &quot;, &quot;, j, &quot;) = &quot;, (T.tri ^ p)[i, j]))
+  }
+}</code></pre>
+<pre><code>## [1] &quot;(1, 1) = 0&quot;
+## [1] &quot;(1, 2) = 625&quot;
+## [1] &quot;(1, 3) = 6561&quot;
+## [1] &quot;(1, 4) = 28561&quot;
+## [1] &quot;(2, 1) = 0&quot;
+## [1] &quot;(2, 2) = 0&quot;
+## [1] &quot;(2, 3) = 10000&quot;
+## [1] &quot;(2, 4) = 38416&quot;
+## [1] &quot;(3, 1) = 0&quot;
+## [1] &quot;(3, 2) = 0&quot;
+## [1] &quot;(3, 3) = 0&quot;
+## [1] &quot;(3, 4) = 50625&quot;
+## [1] &quot;(4, 1) = 0&quot;
+## [1] &quot;(4, 2) = 0&quot;
+## [1] &quot;(4, 3) = 0&quot;
+## [1] &quot;(4, 4) = 0&quot;</code></pre>
 </div>
 </div>
 </div>
